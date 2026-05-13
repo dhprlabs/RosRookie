@@ -202,7 +202,7 @@ def generate_launch_description():
         executable='spawner',
         arguments=[
             'arm_controller',
-            # 'gripper_controller',
+            'gripper_controller',
             '--param-file',
             robot_controllers,
             ],
@@ -228,7 +228,7 @@ def generate_launch_description():
     launchDescriptionObject.add_action(gz_bridge_node)
     launchDescriptionObject.add_action(gz_image_bridge_node)
     launchDescriptionObject.add_action(relay_gripper_camera_info_node)
-    #launchDescriptionObject.add_action(relay_table_camera_info_node)
+    launchDescriptionObject.add_action(relay_table_camera_info_node)
     launchDescriptionObject.add_action(robot_state_publisher_node)
     #launchDescriptionObject.add_action(joint_state_publisher_gui_node)
     launchDescriptionObject.add_action(joint_state_broadcaster_spawner)
